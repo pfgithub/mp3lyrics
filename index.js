@@ -40,7 +40,6 @@ async function getLyrics(search,title){
 		})).search, title);
 	}
 	if(answer === "none") {return "???";}
-	//console.log(answer,answer.id);
 	let song;
 	await Promise.all([
 		(async () => {
@@ -55,9 +54,9 @@ async function getLyrics(search,title){
 }
 
 async function doasync(){
+	if(!filename) {return console.error("Usage: mp3lyrics <filename>");}
 	fs.copyFileSync(path.join(__dirname, "unknown.png"), "/tmp/icon.png");
 	let data = await pify(_ => ffmetadata.read(filename, _));
-	console.log(data);
 	if(!data.album){
 		// parse
 		let artist = data.artist.split` · `[0];
@@ -65,7 +64,6 @@ async function doasync(){
 		// lyrics
 		let lyrics = await getLyrics(artist + " - " + title, data.artist + " - " + data.title);
 		// write
-		console.log("ICON IS ", "/tmp/icon.png");
 		await pify(_ => ffmetadata.write(
 			filename,
 			{album:lyrics},

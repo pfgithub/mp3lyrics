@@ -10,7 +10,5 @@
     "node-genius": "^1.1.0",
     "request": "^2.88.0"
   },
-  "bin":{
-    "mp3lyrics": "./mp3lyrics"
-  } 
+  "bin":"./bin/mp3lyrics.js" 
 }
