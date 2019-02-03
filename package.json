@@ -1,0 +1,13 @@
+{
+  "name": "lyricmp3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "enquirer": "^2.3.0",
+    "ffmetadata": "^1.5.0",
+    "lyricist": "^2.2.2",
+    "node-genius": "^1.1.0",
+    "request": "^2.88.0"
+  }
+}
