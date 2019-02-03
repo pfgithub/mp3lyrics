@@ -9,5 +9,8 @@
     "lyricist": "^2.2.2",
     "node-genius": "^1.1.0",
     "request": "^2.88.0"
-  }
+  },
+  "bin":{
+    "mp3lyrics": "./mp3lyrics"
+  } 
 }
